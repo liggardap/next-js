@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
 import { Inter, JetBrains_Mono } from "next/font/google";
+import { Navbar } from "@/components/layout/navbar";
+import { Footer } from "@/components/layout/footer";
+import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import "./globals.css";
 
 const inter = Inter({
@@ -35,9 +38,10 @@ export default function RootLayout({
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
         <div className="flex min-h-screen flex-col">
-          {/* Navbar will be inserted here */}
+          <Navbar />
           <main className="flex-1">{children}</main>
-          {/* Footer will be inserted here */}
+          <Footer />
+          <WhatsAppButton variant="floating" />
         </div>
       </body>
     </html>
