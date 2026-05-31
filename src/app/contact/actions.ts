@@ -1,7 +1,9 @@
 "use server";
 
+import { headers } from "next/headers";
 import { Resend } from "resend";
 import { contactFormSchema } from "@/lib/validations/contact";
+import { rateLimit } from "@/lib/rate-limit";
 import { companyInfo } from "@/data";
 
 export type ContactFormState =
@@ -21,6 +23,12 @@ export async function submitContactForm(
     message: formData.get("message"),
     honeypot: formData.get("honeypot") ?? "",
   };
+
+  const ip = (await headers()).get("x-forwarded-for") ?? "unknown";
+  const { success: allowed } = rateLimit(ip);
+  if (!allowed) {
+    return { status: "error", message: "Too many requests. Please try again later or contact us via WhatsApp." };
+  }
 
   const parsed = contactFormSchema.safeParse(raw);
 
