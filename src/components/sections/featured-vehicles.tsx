@@ -54,7 +54,7 @@ export function FeaturedVehiclesSection() {
               transition={{ duration: 0.5, delay: i * 0.07 }}
               className="group rounded-xl border border-border/40 bg-card overflow-hidden transition-colors hover:border-brand/30"
             >
-              <div className="relative aspect-[4/3] bg-muted/20 overflow-hidden">
+              <div className="relative aspect-[4/3] bg-white overflow-hidden">
                 <Image
                   src={vehicle.image}
                   alt={vehicle.name}
