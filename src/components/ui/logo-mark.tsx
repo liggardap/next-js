@@ -1,0 +1,22 @@
+export function LogoMark({ className }: { className?: string }) {
+  return (
+    <svg
+      className={className}
+      xmlns="http://www.w3.org/2000/svg"
+      width="48"
+      height="48"
+      viewBox="0 0 48 48"
+      fill="none"
+      role="img"
+      aria-label="Sanur Ride Co. mark"
+    >
+      <path
+        d="M33 11 C 19 11, 19 23, 24 24 C 29 25, 29 37, 15 37"
+        stroke="#38BDF8"
+        strokeWidth="5"
+        strokeLinecap="round"
+        fill="none"
+      />
+    </svg>
+  );
+}
