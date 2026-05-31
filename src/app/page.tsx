@@ -1,5 +1,6 @@
 import dynamic from "next/dynamic";
 import { preload } from "react-dom";
+import { FaqSchema } from "@/components/seo/faq-schema";
 import { HeroSection } from "@/components/sections/hero";
 import { CompanyIntroSection } from "@/components/sections/company-intro";
 import { ServicePreviewSection } from "@/components/sections/services-preview";
@@ -18,6 +19,7 @@ export default function HomePage() {
   if (firstFeatured) preload(firstFeatured.image, { as: "image" });
   return (
     <>
+      <FaqSchema />
       <HeroSection />
       <CompanyIntroSection />
       <ServicePreviewSection />
