@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { MapPin, Phone, Mail } from "lucide-react";
+import { IconMapPin, IconPhone, IconMail } from "@tabler/icons-react";
 import { Logo } from "@/components/ui/logo";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { companyInfo } from "@/data";
@@ -35,17 +35,17 @@ export function Footer() {
             </p>
             <ul className="space-y-2 text-sm text-muted-foreground">
               <li className="flex items-start gap-2">
-                <MapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
+                <IconMapPin className="mt-0.5 h-4 w-4 shrink-0 text-brand" />
                 <span>{companyInfo.address}</span>
               </li>
               <li className="flex items-center gap-2">
-                <Phone className="h-4 w-4 shrink-0 text-brand" />
+                <IconPhone className="h-4 w-4 shrink-0 text-brand" />
                 <a href={`tel:${companyInfo.phone}`} className="hover:text-foreground transition-colors">
                   {companyInfo.phone}
                 </a>
               </li>
               <li className="flex items-center gap-2">
-                <Mail className="h-4 w-4 shrink-0 text-brand" />
+                <IconMail className="h-4 w-4 shrink-0 text-brand" />
                 <a href={`mailto:${companyInfo.email}`} className="hover:text-foreground transition-colors">
                   {companyInfo.email}
                 </a>

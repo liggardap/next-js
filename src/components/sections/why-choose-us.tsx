@@ -1,16 +1,22 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ShieldCheck, Heart, Eye, Handshake, Leaf } from "lucide-react";
-import { LucideIcon } from "lucide-react";
+import {
+  IconShieldCheck,
+  IconHeart,
+  IconEye,
+  IconHeartHandshake,
+  IconLeaf,
+  type TablerIcon,
+} from "@tabler/icons-react";
 import { companyInfo } from "@/data";
 
-const iconMap: Record<string, LucideIcon> = {
-  "shield-check": ShieldCheck,
-  heart: Heart,
-  eye: Eye,
-  "hand-heart": Handshake,
-  leaf: Leaf,
+const iconMap: Record<string, TablerIcon> = {
+  "shield-check": IconShieldCheck,
+  heart: IconHeart,
+  eye: IconEye,
+  "hand-heart": IconHeartHandshake,
+  leaf: IconLeaf,
 };
 
 export function WhyChooseUsSection() {
@@ -34,7 +40,7 @@ export function WhyChooseUsSection() {
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
           {companyInfo.values.map((value, i) => {
-            const Icon = iconMap[value.icon] ?? ShieldCheck;
+            const Icon = iconMap[value.icon] ?? IconShieldCheck;
             return (
               <motion.div
                 key={value.id}

@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Star } from "lucide-react";
+import { IconStar } from "@tabler/icons-react";
 import {
   Carousel,
   CarouselContent,
@@ -15,7 +15,7 @@ function StarRating({ rating }: { rating: number }) {
   return (
     <div className="flex gap-0.5">
       {Array.from({ length: 5 }).map((_, i) => (
-        <Star
+        <IconStar
           key={i}
           className={`h-3.5 w-3.5 ${i < rating ? "fill-brand text-brand" : "fill-muted text-muted"}`}
         />

@@ -3,22 +3,22 @@
 import Link from "next/link";
 import { motion } from "framer-motion";
 import {
-  Bike,
-  Car,
-  Plane,
-  User,
-  Calendar,
-  LucideIcon,
-} from "lucide-react";
+  IconMotorbike,
+  IconCar,
+  IconPlane,
+  IconUser,
+  IconCalendar,
+  type TablerIcon,
+} from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import { services } from "@/data";
 
-const iconMap: Record<string, LucideIcon> = {
-  bike: Bike,
-  car: Car,
-  plane: Plane,
-  user: User,
-  calendar: Calendar,
+const iconMap: Record<string, TablerIcon> = {
+  bike: IconMotorbike,
+  car: IconCar,
+  plane: IconPlane,
+  user: IconUser,
+  calendar: IconCalendar,
 };
 
 export function ServicePreviewSection() {
@@ -42,7 +42,7 @@ export function ServicePreviewSection() {
 
         <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
           {services.map((service, i) => {
-            const Icon = iconMap[service.icon] ?? Car;
+            const Icon = iconMap[service.icon] ?? IconCar;
             return (
               <motion.div
                 key={service.id}

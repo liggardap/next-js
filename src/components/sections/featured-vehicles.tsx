@@ -3,7 +3,7 @@
 import Link from "next/link";
 import Image from "next/image";
 import { motion } from "framer-motion";
-import { Users, Fuel } from "lucide-react";
+import { IconUsers, IconGasStation } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { vehicles } from "@/data";
@@ -73,11 +73,11 @@ export function FeaturedVehiclesSection() {
 
                 <div className="mb-4 flex gap-3 text-xs text-muted-foreground">
                   <span className="flex items-center gap-1">
-                    <Users className="h-3 w-3" />
+                    <IconUsers className="h-3 w-3" />
                     {vehicle.seats} seats
                   </span>
                   <span className="flex items-center gap-1">
-                    <Fuel className="h-3 w-3" />
+                    <IconGasStation className="h-3 w-3" />
                     {vehicle.transmission}
                   </span>
                 </div>

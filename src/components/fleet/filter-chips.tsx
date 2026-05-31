@@ -1,6 +1,6 @@
 "use client";
 
-import { X } from "lucide-react";
+import { IconX } from "@tabler/icons-react";
 import type { FleetFilterState } from "./fleet-filters";
 
 const labels: Record<string, Record<string, string>> = {
@@ -46,7 +46,7 @@ export function FilterChips({ filters, onChange }: FilterChipsProps) {
             aria-label={`Remove ${key} filter`}
             className="rounded-full hover:text-foreground"
           >
-            <X className="h-3 w-3" />
+            <IconX className="h-3 w-3" />
           </button>
         </span>
       ))}

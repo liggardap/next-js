@@ -1,6 +1,6 @@
 "use client";
 
-import { MessageCircle } from "lucide-react";
+import { IconBrandWhatsapp } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import { trackEvent } from "@/lib/analytics";
 
@@ -41,7 +41,7 @@ export function WhatsAppButton({
         aria-label="Chat on WhatsApp"
         className={`fixed bottom-6 right-6 z-50 flex h-14 w-14 items-center justify-center rounded-full bg-[#25D366] text-white shadow-lg transition-transform hover:scale-110 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-[#25D366] focus-visible:ring-offset-2 ${className ?? ""}`}
       >
-        <MessageCircle className="h-7 w-7 fill-white stroke-none" />
+        <IconBrandWhatsapp className="h-7 w-7" />
       </button>
     );
   }
@@ -55,7 +55,7 @@ export function WhatsAppButton({
         aria-label="Chat on WhatsApp"
         className={className}
       >
-        <MessageCircle className="h-5 w-5 text-[#25D366]" />
+        <IconBrandWhatsapp className="h-5 w-5 text-[#25D366]" />
       </Button>
     );
   }
@@ -65,7 +65,7 @@ export function WhatsAppButton({
       onClick={handleClick}
       className={`bg-[#25D366] text-white hover:bg-[#1ebe5d] ${className ?? ""}`}
     >
-      <MessageCircle className="mr-2 h-4 w-4" />
+      <IconBrandWhatsapp className="mr-2 h-4 w-4" />
       WhatsApp Us
     </Button>
   );

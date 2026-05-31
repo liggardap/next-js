@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { IconMenu2 } from "@tabler/icons-react";
 import { Button } from "@/components/ui/button";
 import {
   Sheet,
@@ -28,7 +28,7 @@ export function MobileMenu({ links }: MobileMenuProps) {
         aria-label="Open menu"
         onClick={() => setOpen(true)}
       >
-        <Menu className="h-5 w-5" />
+        <IconMenu2 className="h-5 w-5" />
       </Button>
 
       <Sheet open={open} onOpenChange={setOpen}>

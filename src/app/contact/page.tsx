@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { IconMapPin, IconPhone, IconMail, IconClock } from "@tabler/icons-react";
 import { ContactForm } from "@/components/contact/contact-form";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
 import { companyInfo } from "@/data";
@@ -12,25 +12,25 @@ export const metadata: Metadata = {
 
 const contactDetails = [
   {
-    icon: Phone,
+    icon: IconPhone,
     label: "Phone",
     value: companyInfo.phone,
     href: `tel:${companyInfo.phone.replace(/\s/g, "")}`,
   },
   {
-    icon: Mail,
+    icon: IconMail,
     label: "Email",
     value: companyInfo.email,
     href: `mailto:${companyInfo.email}`,
   },
   {
-    icon: MapPin,
+    icon: IconMapPin,
     label: "Address",
     value: companyInfo.address,
     href: `https://maps.google.com/?q=${encodeURIComponent(companyInfo.address)}`,
   },
   {
-    icon: Clock,
+    icon: IconClock,
     label: "Hours",
     value: "Open daily · 08:00 – 20:00 WITA",
     href: null,

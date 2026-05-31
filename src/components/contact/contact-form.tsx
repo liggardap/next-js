@@ -3,7 +3,7 @@
 import { useActionState } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { CheckCircle, AlertCircle, Loader } from "lucide-react";
+import { IconCircleCheck, IconAlertCircle, IconLoader } from "@tabler/icons-react";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
@@ -35,7 +35,7 @@ export function ContactForm() {
   if (state.status === "success") {
     return (
       <div className="flex flex-col items-center gap-4 rounded-xl border border-border/40 bg-card p-10 text-center">
-        <CheckCircle className="h-10 w-10 text-brand" />
+        <IconCircleCheck className="h-10 w-10 text-brand" />
         <h3 className="text-lg font-semibold text-foreground">Message Sent!</h3>
         <p className="text-sm text-muted-foreground">
           Thanks for reaching out. We&apos;ll get back to you within a few hours.
@@ -59,7 +59,7 @@ export function ContactForm() {
 
       {state.status === "error" && (
         <div className="flex items-center gap-3 rounded-lg border border-destructive/30 bg-destructive/10 px-4 py-3 text-sm text-destructive">
-          <AlertCircle className="h-4 w-4 shrink-0" />
+          <IconAlertCircle className="h-4 w-4 shrink-0" />
           {state.message}
         </div>
       )}
@@ -148,7 +148,7 @@ export function ContactForm() {
       >
         {isPending ? (
           <>
-            <Loader className="mr-2 h-4 w-4 animate-spin" />
+            <IconLoader className="mr-2 h-4 w-4 animate-spin" />
             Sending…
           </>
         ) : (

@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useMemo } from "react";
-import { SlidersHorizontal } from "lucide-react";
+import { IconAdjustmentsHorizontal } from "@tabler/icons-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { VehicleCard } from "./vehicle-card";
 import { FleetFilters, type FleetFilterState } from "./fleet-filters";
@@ -38,7 +38,7 @@ export function FleetListing({ vehicles }: { vehicles: Vehicle[] }) {
     <div>
       <div className="mb-6 flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
         <div className="flex items-center gap-2 text-sm text-muted-foreground">
-          <SlidersHorizontal className="h-4 w-4" />
+          <IconAdjustmentsHorizontal className="h-4 w-4" />
           <span>{filtered.length} vehicle{filtered.length !== 1 ? "s" : ""} found</span>
         </div>
         <FleetFilters filters={filters} onChange={handleChange} />

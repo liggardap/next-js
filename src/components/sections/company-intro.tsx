@@ -1,14 +1,14 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { Shield, Star, MapPin, Users } from "lucide-react";
+import { IconShield, IconStar, IconMapPin, IconUsers } from "@tabler/icons-react";
 import { companyInfo } from "@/data";
 
 const stats = [
-  { icon: MapPin, label: "Based in Sanur", value: "Bali, Indonesia" },
-  { icon: Star, label: "Founded", value: String(companyInfo.founded) },
-  { icon: Users, label: "Fleet Size", value: "142+ Vehicles" },
-  { icon: Shield, label: "Service Areas", value: "All of Bali" },
+  { icon: IconMapPin, label: "Based in Sanur", value: "Bali, Indonesia" },
+  { icon: IconStar, label: "Founded", value: String(companyInfo.founded) },
+  { icon: IconUsers, label: "Fleet Size", value: "142+ Vehicles" },
+  { icon: IconShield, label: "Service Areas", value: "All of Bali" },
 ];
 
 export function CompanyIntroSection() {
