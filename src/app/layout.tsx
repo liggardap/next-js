@@ -15,9 +15,13 @@ const jetbrainsMono = JetBrains_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Sanur Ride Co. | Vehicle Rental in Bali",
+  title: {
+    default: "Sanur Ride Co. | Vehicle Rental in Bali",
+    template: "%s | Sanur Ride Co.",
+  },
   description:
     "Reliable scooter and car rentals in Sanur, Bali. Transparent pricing, well-maintained fleet, and friendly local support.",
+  metadataBase: new URL("https://www.sanurride.co"),
 };
 
 export default function RootLayout({
@@ -30,7 +34,11 @@ export default function RootLayout({
       <body
         className={`${inter.variable} ${jetbrainsMono.variable} antialiased`}
       >
-        {children}
+        <div className="flex min-h-screen flex-col">
+          {/* Navbar will be inserted here */}
+          <main className="flex-1">{children}</main>
+          {/* Footer will be inserted here */}
+        </div>
       </body>
     </html>
   );
