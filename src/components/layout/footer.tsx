@@ -26,7 +26,7 @@ export function Footer() {
 
   return (
     <footer className="border-t border-border/40 bg-card">
-      <div className="mx-auto max-w-[var(--container-max)] px-4 py-12">
+      <div className="mx-auto max-w-(--container-max) px-4 py-12">
         <div className="grid grid-cols-1 gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-1">
             <Logo className="mb-4" />

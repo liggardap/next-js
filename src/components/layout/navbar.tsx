@@ -20,7 +20,7 @@ export function Navbar() {
 
   return (
     <header className="sticky top-0 z-50 border-b border-border/40 bg-background/95 backdrop-blur supports-[backdrop-filter]:bg-background/60">
-      <nav className="mx-auto flex h-16 max-w-[var(--container-max)] items-center justify-between px-4">
+      <nav className="mx-auto flex h-16 max-w-(--container-max) items-center justify-between px-4">
         <Link href="/" aria-label="Sanur Ride Co. home">
           <Logo />
         </Link>

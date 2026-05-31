@@ -9,7 +9,6 @@ import {
   SheetContent,
   SheetHeader,
   SheetTitle,
-  SheetClose,
 } from "@/components/ui/sheet";
 import { Logo } from "@/components/ui/logo";
 import { WhatsAppButton } from "@/components/ui/whatsapp-button";
@@ -35,25 +34,22 @@ export function MobileMenu({ links }: MobileMenuProps) {
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetContent side="left" className="flex flex-col bg-card px-0">
           <SheetHeader className="border-b border-border/40 px-6 pb-4">
-            <SheetTitle asChild>
-              <SheetClose asChild>
-                <Link href="/" aria-label="Sanur Ride Co. home">
-                  <Logo />
-                </Link>
-              </SheetClose>
-            </SheetTitle>
+            <SheetTitle className="sr-only">Navigation Menu</SheetTitle>
+            <Link href="/" aria-label="Sanur Ride Co. home" onClick={() => setOpen(false)}>
+              <Logo />
+            </Link>
           </SheetHeader>
 
           <nav className="flex flex-1 flex-col gap-1 overflow-y-auto px-3 py-4">
             {links.map(({ href, label }) => (
-              <SheetClose asChild key={href}>
-                <Link
-                  href={href}
-                  className="rounded-md px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
-                >
-                  {label}
-                </Link>
-              </SheetClose>
+              <Link
+                key={href}
+                href={href}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-3 py-3 text-sm font-medium text-muted-foreground transition-colors hover:bg-background hover:text-foreground"
+              >
+                {label}
+              </Link>
             ))}
           </nav>
 
