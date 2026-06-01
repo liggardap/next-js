@@ -73,11 +73,11 @@ export function FeaturedVehiclesSection() {
 
                 <div className="mb-4 flex gap-3 text-xs text-muted-foreground">
                   <span className="flex items-center gap-1">
-                    <IconUsers className="h-3 w-3" />
+                    <IconUsers className="h-3 w-3" aria-hidden="true" />
                     {vehicle.seats} seats
                   </span>
                   <span className="flex items-center gap-1">
-                    <IconGasStation className="h-3 w-3" />
+                    <IconGasStation className="h-3 w-3" aria-hidden="true" />
                     {vehicle.transmission}
                   </span>
                 </div>

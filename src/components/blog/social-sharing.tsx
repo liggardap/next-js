@@ -50,7 +50,7 @@ export function SocialSharing({ url, title }: SocialSharingProps) {
           aria-label={`Share on ${label}`}
           className="flex h-8 w-8 items-center justify-center rounded-lg border border-border/40 bg-card text-muted-foreground transition-colors hover:border-brand/30 hover:text-brand"
         >
-          <Icon className="h-4 w-4" />
+          <Icon className="h-4 w-4" aria-hidden="true" />
         </a>
       ))}
       <button
@@ -58,7 +58,7 @@ export function SocialSharing({ url, title }: SocialSharingProps) {
         aria-label="Copy link"
         className="flex h-8 w-8 items-center justify-center rounded-lg border border-border/40 bg-card text-muted-foreground transition-colors hover:border-brand/30 hover:text-brand"
       >
-        {copied ? <IconCheck className="h-4 w-4 text-brand" /> : <IconLink className="h-4 w-4" />}
+        {copied ? <IconCheck className="h-4 w-4 text-brand" aria-hidden="true" /> : <IconLink className="h-4 w-4" aria-hidden="true" />}
       </button>
     </div>
   );

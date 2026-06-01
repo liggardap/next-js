@@ -46,11 +46,11 @@ export function VehicleCard({ vehicle, priority = false }: { vehicle: Vehicle; p
 
         <div className="mb-4 flex gap-4 text-xs text-muted-foreground">
           <span className="flex items-center gap-1">
-            <IconUsers className="h-3 w-3" />
+            <IconUsers className="h-3 w-3" aria-hidden="true" />
             {vehicle.seats} seats
           </span>
           <span className="flex items-center gap-1">
-            <IconGasStation className="h-3 w-3" />
+            <IconGasStation className="h-3 w-3" aria-hidden="true" />
             {vehicle.transmission}
           </span>
         </div>
@@ -58,7 +58,7 @@ export function VehicleCard({ vehicle, priority = false }: { vehicle: Vehicle; p
         <ul className="mb-4 space-y-1">
           {vehicle.features.slice(0, 3).map((f) => (
             <li key={f} className="flex items-center gap-2 text-xs text-muted-foreground">
-              <IconCheck className="h-3 w-3 shrink-0 text-brand" />
+              <IconCheck className="h-3 w-3 shrink-0 text-brand" aria-hidden="true" />
               {f}
             </li>
           ))}

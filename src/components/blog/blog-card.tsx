@@ -23,7 +23,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
               key={tag}
               className="flex items-center gap-1 rounded-full bg-brand/10 px-2 py-0.5 text-xs font-medium text-brand"
             >
-              <IconTag className="h-2.5 w-2.5" />
+              <IconTag className="h-2.5 w-2.5" aria-hidden="true" />
               {tag}
             </span>
           ))}
@@ -37,7 +37,7 @@ export function BlogCard({ post }: { post: BlogPost }) {
         </p>
 
         <div className="flex items-center gap-1.5 text-xs text-muted-foreground">
-          <IconCalendar className="h-3.5 w-3.5" />
+          <IconCalendar className="h-3.5 w-3.5" aria-hidden="true" />
           {formatDate(post.date)}
         </div>
       </div>
