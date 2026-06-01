@@ -7,7 +7,7 @@ export function LocalBusinessSchema() {
     name: companyInfo.name,
     description:
       "Reliable scooter and car rentals in Sanur, Bali. Transparent pricing, well-maintained fleet, and friendly local support.",
-    url: "https://www.sanurride.co",
+    url: "https://www.liggar.site",
     telephone: companyInfo.phone,
     email: companyInfo.email,
     address: {

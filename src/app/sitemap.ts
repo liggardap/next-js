@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { getAllPosts } from "@/lib/blog";
 
-const BASE = "https://www.sanurride.co";
+const BASE = "https://www.liggar.site";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const posts = getAllPosts();

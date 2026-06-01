@@ -35,7 +35,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!post) notFound();
 
   const related = getRelatedPosts(post.slug, post.tags);
-  const pageUrl = `https://www.sanurride.co/blog/${post.slug}`;
+  const pageUrl = `https://www.liggar.site/blog/${post.slug}`;
 
   return (
     <div className="py-20">

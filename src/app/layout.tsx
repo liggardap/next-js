@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   },
   description:
     "Reliable scooter and car rentals in Sanur, Bali. Transparent pricing, well-maintained fleet, and friendly local support.",
-  metadataBase: new URL("https://www.sanurride.co"),
+  metadataBase: new URL("https://www.liggar.site"),
   openGraph: {
     siteName: "Sanur Ride Co.",
     locale: "en_US",

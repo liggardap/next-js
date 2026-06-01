@@ -7,7 +7,7 @@ export const companyInfo: CompanyInfo = {
   headquarters: "Sanur, Denpasar, Bali, Indonesia",
   phone: "+6236155588 99",
   email: "hello@sanurride.co",
-  website: "www.sanurride.co",
+  website: "www.liggar.site",
   address: "Jl. Danau Tamblingan No. 88, Sanur, Denpasar Selatan, Bali 80228",
   vision:
     "To become Bali's most trusted and customer-focused mobility partner, enabling travelers and residents to experience the island with freedom, comfort, and confidence.",

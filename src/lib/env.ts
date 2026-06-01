@@ -7,7 +7,7 @@ const serverEnvSchema = z.object({
 
 const clientEnvSchema = z.object({
   NEXT_PUBLIC_GA_ID: z.string().optional(),
-  NEXT_PUBLIC_SITE_URL: z.string().url().default("https://www.sanurride.co"),
+  NEXT_PUBLIC_SITE_URL: z.string().url().default("https://www.liggar.site"),
 });
 
 function parseEnv() {
